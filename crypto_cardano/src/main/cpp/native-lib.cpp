@@ -6,7 +6,7 @@
 
 extern "C"
 JNIEXPORT jbyteArray JNICALL
-Java_io_noone_cardano_crypto_Native_cardanoCryptoEd25519publickey(
+Java_io_noone_adnroidcore_cardano_crypto_Native_cardanoCryptoEd25519publickey(
         JNIEnv *env,
         jobject thiz,
         jbyteArray private_key
@@ -26,7 +26,7 @@ Java_io_noone_cardano_crypto_Native_cardanoCryptoEd25519publickey(
 
 extern "C"
 JNIEXPORT jbyteArray JNICALL
-Java_io_noone_cardano_crypto_Native_cardanoCryptoEd25519sign(
+Java_io_noone_adnroidcore_cardano_crypto_Native_cardanoCryptoEd25519sign(
         JNIEnv *env,
         jobject thiz,
         jbyteArray message,
@@ -62,7 +62,7 @@ Java_io_noone_cardano_crypto_Native_cardanoCryptoEd25519sign(
 
 extern "C"
 JNIEXPORT jbyteArray JNICALL
-Java_io_noone_cardano_crypto_Native_sha512HMAC(
+Java_io_noone_adnroidcore_cardano_crypto_Native_sha512HMAC(
         JNIEnv *env, jobject thiz,
         jbyteArray key,
         jint key_size,
@@ -90,7 +90,7 @@ Java_io_noone_cardano_crypto_Native_sha512HMAC(
 
 extern "C"
 JNIEXPORT jbyteArray JNICALL
-Java_io_noone_cardano_crypto_Native_deriveCardanoKey(
+Java_io_noone_adnroidcore_cardano_crypto_Native_deriveCardanoKey(
         JNIEnv *env,
         jobject thiz,
         jbyteArray key,
