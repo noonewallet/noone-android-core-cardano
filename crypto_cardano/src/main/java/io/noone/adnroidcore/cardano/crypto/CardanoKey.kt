@@ -1,6 +1,6 @@
 package io.noone.adnroidcore.cardano.crypto
 
-import io.noone.adnrodicore.crypto.utils.storeInt32BE
+import io.noone.androidcore.utils.storeInt32BE
 import org.bouncycastle.crypto.CipherParameters
 import org.bouncycastle.crypto.digests.SHA512Digest
 import org.bouncycastle.crypto.macs.HMac

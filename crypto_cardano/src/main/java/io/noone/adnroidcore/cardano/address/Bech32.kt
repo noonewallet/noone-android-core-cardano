@@ -1,7 +1,7 @@
 package io.noone.adnroidcore.cardano.address
 
-import io.noone.adnrodicore.crypto.exceptions.AddressFormatException
-import io.noone.adnrodicore.crypto.utils.BitsConverter
+import io.noone.androidcore.exceptions.AddressFormatException
+import io.noone.androidcore.utils.BitsConverter
 import java.util.*
 
 object Bech32 {

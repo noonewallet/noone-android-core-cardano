@@ -1,6 +1,6 @@
 package io.noone.adnroidcore.cardano.address
 
-import io.noone.adnrodicore.crypto.utils.blake2b224
+import io.noone.androidcore.utils.blake2b224
 
 class CardanoAddress(
     private val prefix: Byte,

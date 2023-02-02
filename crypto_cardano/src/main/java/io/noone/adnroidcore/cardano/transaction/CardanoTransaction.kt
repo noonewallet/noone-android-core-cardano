@@ -1,8 +1,8 @@
 package io.noone.adnroidcore.cardano.transaction
 
 import com.upokecenter.cbor.CBORObject
-import io.noone.adnrodicore.crypto.utils.blake2b256
-import io.noone.adnrodicore.crypto.utils.sumByLong
+import io.noone.androidcore.utils.blake2b256
+import io.noone.androidcore.utils.sumByLong
 import java.io.ByteArrayOutputStream
 
 class CardanoTransaction(
