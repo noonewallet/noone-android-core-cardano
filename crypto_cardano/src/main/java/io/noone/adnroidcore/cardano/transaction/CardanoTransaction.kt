@@ -41,7 +41,7 @@ class CardanoTransaction(
             val tokens: MutableList<Token>
         ) {
             data class Token(
-                var tokenName: String,
+                var tokenName: ByteArray,
                 var tokenAmount: Long,
             )
         }
@@ -277,7 +277,7 @@ class CardanoTransaction(
                     for (tokenOutput in it.tokens) {
                         val cborTokens = CBORObject.NewMap()
                         for (tokenName in tokenOutput.tokens) {
-                            cborTokens.Add(tokenName.tokenName.toByteArray(), tokenName.tokenAmount)
+                            cborTokens.Add(tokenName.tokenName, tokenName.tokenAmount)
                         }
                         cborTokensMap.Add(tokenOutput.polocyId, cborTokens)
                     }
