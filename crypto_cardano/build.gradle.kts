@@ -44,7 +44,7 @@ android {
 }
 
 dependencies {
-    implementation("org.bouncycastle:bcprov-jdk15on:1.68")
+    implementation("org.bouncycastle:bcprov-jdk15on:1.70")
     implementation("com.upokecenter:cbor:4.4.4")
     implementation(project(":crypto_core"))
     testImplementation("junit:junit:4.13.2")
