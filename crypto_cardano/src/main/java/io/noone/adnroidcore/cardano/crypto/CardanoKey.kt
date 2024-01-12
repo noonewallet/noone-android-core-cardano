@@ -1,5 +1,7 @@
 package io.noone.adnroidcore.cardano.crypto
 
+import io.noone.androidcore.utils.Bech32
+import io.noone.androidcore.utils.BitsConverter
 import io.noone.androidcore.utils.storeInt32BE
 import org.bouncycastle.crypto.CipherParameters
 import org.bouncycastle.crypto.digests.SHA512Digest
@@ -49,7 +51,15 @@ class CardanoKey(
     val publicKey: ByteArray
         get() = _publicKey!!
 
+    val xpub: String
+        get() {
+            val data = publicKey + chainCode
+            val converted8to5 = BitsConverter.convertBits(data, 0, data.size, 8, 5, true)
+            return Bech32.encode(HRP_XPUB, converted8to5)
+        }
+
     companion object {
+        const val HRP_XPUB = "xpub"
         const val KEY_LENGTH = 64
         const val CHAINCODE_LENGTH = 32
         private const val PBKDF2_ROUNDS = 4096
